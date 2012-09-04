@@ -13,4 +13,6 @@
 
 <br />
 
+<%if current_user.role? 'Admin User'%>
 <%= link_to 'New Book', new_book_path %>
+<%end%>
