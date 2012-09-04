@@ -1,0 +1,5 @@
+<%=render :partial => 'shared/error_messages', :locals => {:object => @comment}%>
+<div class="actions">
+    <%= text_area :comment, :comment, {:size => '70x3'} %>
+    <%= submit_tag "Post" %>
+</div>

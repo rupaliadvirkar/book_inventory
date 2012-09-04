@@ -1,0 +1,27 @@
+Prerequisites
+
+ruby 1.9.3
+
+rails 3.2.1
+
+MySQL server (I am using 5.1)
+
+Steps to be followed
+
+1. run bundle install
+
+2. rake db:migrate
+
+3. rake db:seed (To add role's master data)
+
+4. Start the server (rails s)
+
+Admin user login credential :
+
+adminuser@testme.com
+password
+
+Normal user login credential :
+
+normaluser@testme.com
+password

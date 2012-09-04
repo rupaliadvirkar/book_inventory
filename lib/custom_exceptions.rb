@@ -1,0 +1,2 @@
+class InvalidBook < StandardError
+end

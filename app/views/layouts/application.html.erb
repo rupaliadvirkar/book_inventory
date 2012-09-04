@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BookInventory</title>
+        <%= stylesheet_link_tag    "application", :media => "all" %>
+        <%= javascript_include_tag "application" %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <%if current_user %>
+	        <%if ACTIONS_RELATED_TO_AUTHORS.include?(action_name) %>
+		        <%=link_to 'Books', books_path %>&nbsp;&nbsp;
+		        Authors
+			<%else %>
+		        Books&nbsp;&nbsp;<%=link_to 'Authors', authors_books_path %>
+	        <%end %>
+       		 <div style="float:right;">
+            	<strong>Welcome</strong>
+            	<%=current_user.email %> | <%=link_to 'logout', '/logout' %>
+        	</div>
+        <%end %>
+        <%= yield %>
+    </body>
+</html>

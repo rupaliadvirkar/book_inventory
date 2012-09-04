@@ -1,0 +1,15 @@
+<%=render :partial => 'shared/error_messages', :locals => {:object => @book}%>
+<%= form_for(@book) do |f| %>
+  <div class="actions">
+  	Name:&nbsp;&nbsp;&nbsp;
+  	<%= f.text_field :name%>
+	<br/>
+	<br/>
+	Authors:&nbsp;&nbsp;
+	<%= f.text_field :author_names%>
+	(Please enter multiple authors separated by comma only)
+	<br/>
+	<br/>
+    <%= f.submit "Save"%>
+  </div>
+<% end %>

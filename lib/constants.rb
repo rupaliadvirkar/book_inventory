@@ -1,0 +1,1 @@
+ACTIONS_RELATED_TO_AUTHORS = ['authors', 'author']

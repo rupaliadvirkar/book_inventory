@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<%=@book.name%>
+<br/>
+<%=(@authors.collect{|a| a.name}).join(" , ")%>
+<br/>
+<br/>
+<%=@comments.length%> Comments
+<br/><br/>
+<%for comment in @comments%>
+	<strong><%=comment.comment%></strong><br/>
+	Posted <%=comment.created_at.strftime("%b %d, %Y at %I:%M %p")%><br/>
+	<%=comment.user.email%><br/> 
+	<br/>
+<%end%>
+
+<%@comment = Comment.new%>
+<%= form_for @comment, :url => comments_books_path(:id => @book.id, :type => 'Book'), :method => :post do |f| %>
+	<%= render 'comment_form' %>
+<%end%>
+<%# link_to 'Edit', edit_book_path(@book) %>
+<%= link_to 'Back', books_path %>
