@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.find(:all,:include => {:comments => :user})
+    @books = Book.all
     
     respond_to do |format|
       format.html # index.html.erb
@@ -97,7 +97,7 @@ class BooksController < ApplicationController
   end
   
   def authors
-    @authors = Author.find(:all, :include => {:comments => :user})
+    @authors = Author.all
     respond_to do |format|
       format.html
       format.json { render json: @authors }
