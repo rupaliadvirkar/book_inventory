@@ -52,3 +52,5 @@ gem 'sqlite3'
 gem 'rolify'
 
 gem 'acts_as_commentable', '2.0.1'
+
+gem 'webrat'
